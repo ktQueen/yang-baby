@@ -1,0 +1,25 @@
+<!--标题-->
+<view class="title">{{title}}</view>
+<!--图片列表-->
+<scroll-view
+    scroll-y
+  >
+    <view class='img-box'>
+      <view wx:for="{{imgDatas}}" 
+            wx:key="" 
+            class='img-list'>
+        <view class="img-one" >
+          <image src="{{item.src}}" 
+                mode="center" 
+                lazy-load=true
+                class="img-src"
+                ></image>
+        </view>
+        <text class="img-title">{{item.title}}{{index+1}}</text>
+      </view>
+    </view>
+    
+  </scroll-view>
+
+
+

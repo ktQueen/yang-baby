@@ -1,0 +1,27 @@
+<!--标题-->
+<view class="title">hello，欢迎来到小杨宝宝的天地！</view>
+<!--相册列表-->
+<scroll-view
+    scroll-y
+  >
+    <view class='photo-box'>
+      <view wx:for="{{photoDatas}}" 
+            wx:key="" 
+            class='photo-list'>
+        <view class="photo-one" 
+              bindtap="toPhotoDetails" 
+              data-id="{{index}}">
+          <image src="{{item.src}}" 
+                mode="center" 
+                lazy-load=true
+                class="photo-src"
+                ></image>
+        </view>
+        <text class="photo-title">{{item.title}}{{index+1}}</text>
+      </view>
+    </view>
+    
+  </scroll-view>
+
+
+

@@ -1,0 +1,29 @@
+/*相册 */
+.title{
+  text-align: center;
+  line-height: 40px;
+}
+.photo-box{
+  padding: 5px;
+  overflow: hidden;
+}
+.photo-list{
+  float: left;
+  width: calc( 50% - 10px);
+  padding: 5px;
+  text-align: center;
+}
+.photo-one{
+  overflow: hidden;
+  height: 200px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 10px #ddd;
+  background: #f7f7f7;
+}
+.photo-src{
+  max-width: 100%;
+  max-height: 100%;
+}
+.photo-title{
+  font-size: 12px;
+}
