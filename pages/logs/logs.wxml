@@ -1,0 +1,32 @@
+<view class="logs">
+  <form bindsubmit="formSubmit">
+    <view class="btn-area">
+      <button size='mini'
+              class="btn-cancle" >取消</button>
+      <button form-type="submit" 
+              size='mini' 
+              type='primary' 
+              class="btn-submit">发表</button>
+    </view>
+    <view class="containter">
+      <view class="section">
+        <textarea  
+                placeholder="这一刻的想法..."
+                class="textarea" 
+                auto-focus/>
+      </view>
+      <view class="section section_gap radio-box">
+        <radio-group name="radio-group">
+          <label>
+            <radio value="radio1" />
+            私密
+          </label>
+          <label>
+            <radio value="radio2"  />
+            公开
+          </label>
+        </radio-group>
+      </view>
+    </view>
+  </form>
+</view>

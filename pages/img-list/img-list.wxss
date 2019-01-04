@@ -2,6 +2,7 @@
 .title{
   text-align: center;
   line-height: 40px;
+  color: #666;
 }
 .img-box{
   padding: 5px;

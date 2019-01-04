@@ -1,0 +1,25 @@
+/* pages/logs/logs.wxss */
+.logs{
+  padding: 10px;
+}
+.btn-area{
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.btn-submit{
+  float: right;
+}
+.btn-cancle{
+  float: left;
+  border: none;
+  background: transparent;
+}
+.containter{
+  padding: 10px;
+}
+.textarea{
+  font-size: 14px;
+}
+.radio-box{
+  font-size: 12px;
+}

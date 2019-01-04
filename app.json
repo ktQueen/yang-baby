@@ -1,7 +1,10 @@
 {
   "pages": [
+    "pages/logs/logs",
+    "pages/index/index",
     "pages/photo-list/photo-list",
     "pages/img-list/img-list",
+    "pages/upload-img/upload-img",
     "pages/my/my"
   ],
   "window": {
@@ -9,18 +12,6 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "小杨宝宝",
     "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "list": [
-      {
-        "pagePath": "pages/photo-list/photo-list",
-        "text": "首页"
-      },
-      {
-        "pagePath": "pages/my/my",
-        "text": "我的"
-      }
-    ]
   },
   "networkTimeout": {
     "request": 10000,

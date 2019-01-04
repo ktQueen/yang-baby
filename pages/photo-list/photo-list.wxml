@@ -1,5 +1,5 @@
 <!--标题-->
-<view class="title">hello，欢迎来到小杨宝宝的天地！</view>
+<view class="title">hello，欢迎来到小杨宝宝相册！</view>
 <!--相册列表-->
 <scroll-view
     scroll-y
