@@ -1,9 +1,17 @@
 <!--标题-->
 <view class="title">hello，欢迎来到小杨宝宝相册！</view>
+<!-- 上传 -->
+<form bindsubmit="formSubmit">
+  <view class="form-box">
+    <input placeholder="相册名称" class="input"></input>  
+    <button form-type="submit" 
+            size='mini' 
+            type='primary'
+            class="btn">新建</button>
+  </view>
+</form>
 <!--相册列表-->
-<scroll-view
-    scroll-y
-  >
+<scroll-view scroll-y>
     <view class='photo-box'>
       <view wx:for="{{photoDatas}}" 
             wx:key="" 
@@ -14,13 +22,20 @@
           <image src="{{item.src}}" 
                 mode="center" 
                 lazy-load=true
-                class="photo-src"
-                ></image>
+                class="photo-src"></image>
         </view>
-        <text class="photo-title">{{item.title}}{{index+1}}</text>
+        <text class="photo-title"
+              data-index="{{index}}"
+              wx:if="{{!item.isShow}}" 
+              bindtap='editTitle'>{{item.title}}{{index+1}}</text>
+        <input wx:if="{{item.isShow}}"
+               focus ="{{item.isShow}}"
+               data-index="{{index}}"
+               value="{{item.title}}{{index+1}}"
+               class="input-title"
+               bindblur='sureTitle'/>
       </view>
     </view>
-    
   </scroll-view>
 
 

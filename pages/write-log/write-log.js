@@ -1,4 +1,4 @@
-// pages/upload-img/upload-img.js
+// pages/logs/logs.js
 Page({
 
   /**
@@ -62,5 +62,15 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  //表单提交
+  formSubmit(e) {
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+  },
+  //取消
+  cancle:function(){
+    wx.navigateBack({
+      delta: 1
+    })
   }
 })

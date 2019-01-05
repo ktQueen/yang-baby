@@ -2,7 +2,8 @@
   <form bindsubmit="formSubmit">
     <view class="btn-area">
       <button size='mini'
-              class="btn-cancle" >取消</button>
+              class="btn-cancle"
+              bindtap='cancle' >取消</button>
       <button form-type="submit" 
               size='mini' 
               type='primary' 
@@ -19,7 +20,7 @@
         <radio-group name="radio-group">
           <label>
             <radio value="radio1" />
-            私密
+            私密 
           </label>
           <label>
             <radio value="radio2"  />

@@ -40,7 +40,6 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    this.text();
   },
 
   /**
@@ -97,15 +96,16 @@ Page({
       }
     }, 20);
   },
-  //跳转
-  toPhotos:function(){
+  //跳转相册
+  toPhoto:function(){
     wx.navigateTo({
       url: '../../pages/photo-list/photo-list'
     })
   },
-  toLogs: function () {
+  // 跳转日志
+  toLog: function () {
     wx.navigateTo({
-      url: '../../pages/logs/logs'
+      url: '../../pages/log-list/log-list'
     })
   },
 })

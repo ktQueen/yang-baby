@@ -78,5 +78,52 @@ Page({
         console.log(res)
       }
     })
+  },
+  // 上传图片
+  toUploadImg: function () {
+    wx.chooseImage({
+      success(res) {
+        const tempFilePaths = res.tempFilePaths
+        wx.uploadFile({
+          url: 'https://example.weixin.qq.com/upload', // 仅为示例，非真实的接口地址
+          filePath: tempFilePaths[0],
+          name: 'file',
+          formData: {
+            user: 'test'
+          },
+          success(res) {
+            const data = res.data
+            // do something
+          }
+        })
+      }
+    })
+  },
+  // 修改图片名称
+  editTitle: function (e) {
+    this.titleFn(e, 'start');
+  },
+  // 确认修改标题
+  sureTitle: function (e) {
+    console.log(e.detail.value);
+    this.titleFn(e, 'end');
+  },
+  titleFn: function (e, state) {
+    var data = this.data.imgDatas;
+    for (var i = 0; i < data.length; i++) {
+      data[i].isShow = false;
+      if (i == e.currentTarget.dataset.index) {
+        if (state == 'start') {//点击的是当前名称
+          data[i].isShow = true;
+        }
+        if (state == 'end') {// 失去焦点
+          data[i].title = e.detail.value;
+          // 发起请求，向后台存储数据
+        }
+      }
+    }
+    this.setData({
+      imgDatas: data
+    });
   }
 })

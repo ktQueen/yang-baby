@@ -1,9 +1,9 @@
+<!-- 上传 -->
+<view class="upload-btn" bindtap='toUploadImg'>上传</view>
 <!--标题-->
 <view class="title">{{title}}</view>
 <!--图片列表-->
-<scroll-view
-    scroll-y
-  >
+<scroll-view scroll-y>
     <view class='img-box'>
       <view wx:for="{{imgDatas}}" 
             wx:key="" 
@@ -15,10 +15,18 @@
                 class="img-src"
                 ></image>
         </view>
-        <text class="img-title">{{item.title}}{{index+1}}</text>
+        <text class="img-title"
+              data-index="{{index}}"
+              wx:if="{{!item.isShow}}" 
+              bindtap='editTitle'>{{item.title}}{{index+1}}</text>
+        <input wx:if="{{item.isShow}}"
+               focus ="{{item.isShow}}"
+               data-index="{{index}}"
+               value="{{item.title}}{{index+1}}"
+               class="input-title"
+               bindblur='sureTitle'/>
       </view>
     </view>
-    
   </scroll-view>
 
 

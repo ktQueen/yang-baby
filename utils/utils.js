@@ -35,5 +35,18 @@ module.exports = {
       "title": "相册名",
       "src": "http://img1.imgtn.bdimg.com/it/u=4095470285,4213575198&fm=26&gp=0.jpg"
     }
+  ],
+  // 日志数据
+  "logDatas":[
+    {
+      "name": "妈妈",
+      "content":"ssqqqqdhfskdfslkd的螺蛳粉军绿色短裤sskdfslkd的螺蛳粉军绿色短裤",
+      "time":"2019-01-01"
+    }, 
+    {
+      "name": "爸爸",
+      "content": "dhfskdfslkd的螺蛳粉军绿色短裤",
+      "time": "2019-01-02"
+    }
   ]
 }

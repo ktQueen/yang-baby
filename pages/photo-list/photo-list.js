@@ -96,5 +96,36 @@ Page({
         console.log(res);
       }
     });
+  },
+  //表单提交
+  formSubmit(e) {
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+  },
+  // 修改相册名称
+  editTitle: function (e) {
+    this.titleFn(e,'start');
+  },
+  // 确认修改标题
+  sureTitle:function(e){
+    console.log(e.detail.value);
+    this.titleFn(e,'end');
+  },
+  titleFn:function(e,state){
+    var data = this.data.photoDatas;
+    for(var i=0;i<data.length;i++){
+      data[i].isShow = false;
+      if (i == e.currentTarget.dataset.index){
+        if (state == 'start') {//点击的是当前名称
+          data[i].isShow = true;
+        }
+        if (state == 'end') {// 失去焦点
+          data[i].title = e.detail.value;
+          // 发起请求，向后台存储数据
+        }
+      }
+    }
+    this.setData({
+      photoDatas: data
+    });
   }
 })

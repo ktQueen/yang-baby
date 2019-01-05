@@ -1,0 +1,25 @@
+<!-- 发表 -->
+<view class="write-btn" bindtap='toWriteLog'>发表</view>
+<!--标题-->
+<view class="title">hello，欢迎来到小杨宝宝留言板！</view>
+<!--日志列表-->
+<scroll-view scroll-y>
+    <view class='log-box'>
+      <view wx:for="{{logDatas}}" 
+            wx:key="" 
+            class='log-list'>
+        <view class="log-one">
+          <view class="img" style='background:{{bgColor[index]}}'>{{item.name}}</view>
+          <view class="content-box">
+            <view class="name">{{item.name}}</view>
+            <view class="content">{{item.content}}</view>
+            <view class="time">{{item.time}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+  </scroll-view>
+
+
+

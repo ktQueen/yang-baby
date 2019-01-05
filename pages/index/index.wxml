@@ -1,16 +1,16 @@
-<!--首页=====相册(图片列表，上传图片)，日志（日志列表，发表日志），我的-->
+<!--首页=====相册列表(图片列表)，日志列表（发表日志），我的-->
 <view class="home">
   <image src='../../imgs/bg.png' mode='aspectFill' class='bg-img'></image>
   <view class="container">
     <text class="text">{{text}}</text>
     <view class="link" wx:if="{{isShow}}">
-      <view class="link-list photo" bindtap="toPhotos" >
+      <view class="link-list" bindtap="toPhoto" >
         <image src='../../imgs/foot.png' 
                 mode='aspectFit' 
                 class="link-img"></image>
         相册
       </view>
-      <view class="link-list logs" bindtap="toLogs" >
+      <view class="link-list" bindtap="toLog" >
         <image src='../../imgs/foot.png' 
                 mode='aspectFit' 
                 class="link-img"></image>
@@ -18,9 +18,5 @@
       </view>
     </view>
   </view>
-  
-  <!-- <view >
-    <view>我的</view>
-  </view> -->
 </view>
 
